@@ -1,7 +1,7 @@
 # Besprechung – YYYY-MM-DD [Thema]
 
 **Datum:** YYYY-MM-DD
-**Teilnehmer:** Benjamin Golder, Dennis [Nachname]
+**Teilnehmer:** Benjamin Golder, Dennis Eberhard
 **Dauer:** Xh
 
 ---
