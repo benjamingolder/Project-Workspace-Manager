@@ -13,7 +13,7 @@ Projektentscheidungen werden als **Architecture Decision Records (ADR)** dokumen
 
 | ADR | Titel | Status |
 |---|---|---|
-| [ADR-001](./ADR-001_Power-Platform-als-Technologie.md) | Power Platform als Entwicklungsplattform | Entschieden |
+| [ADR-001](./ADR-001_Entwicklungsumgebung.md) | Entwicklungsumgebung (Eclipse) und UML-Tool (Visual Paradigm) | Entschieden |
 | [ADR-002](./ADR-002_GitHub-als-Versionskontrolle.md) | GitHub als Versionskontrolle und Kollaborationsplattform | Entschieden |
 | [ADR-003](./ADR-003_Umfang-Iteration-1.md) | Umfang der 1. Iteration (MVP) | Entschieden |
 
