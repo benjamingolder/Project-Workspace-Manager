@@ -43,6 +43,11 @@ Dieses Protokoll dokumentiert alle Arbeitsschritte und Fortschritte im Projektve
 - ADR-002 angelegt: GitHub als Versionskontrolle und Kollaborationsplattform
 - ADR-003 angelegt: Umfang der 1. Iteration (MVP: FA01–FA04)
 
+**Besprechungsprotokolle**
+- Vorlage `_VORLAGE.md` für Besprechungsprotokolle erstellt
+- Erstes Besprechungsprotokoll `2026-03-20_Projektstart.md` angelegt (Benjamin & Dennis)
+- Arbeitsprotokoll `ARBEITSPROTOKOLL.md` angelegt und mit bisherigem Fortschritt befüllt
+
 ### Nächste Schritte
 - Kapitel «Projektumgebung» in Hauptdokumentation einbauen (alle 7 Punkte Aufgabe 2)
 - Teammitglieder und Arbeitsaufteilung dokumentieren (Punkt 3: Organisation Arbeitsgruppe)
