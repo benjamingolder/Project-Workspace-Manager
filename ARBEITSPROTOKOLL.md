@@ -4,6 +4,18 @@ Dieses Protokoll dokumentiert alle Arbeitsschritte und Fortschritte im Projektve
 
 ---
 
+## 2026-02-27
+
+**Teilnehmer:** Benjamin Golder, Dennis Eberhard
+**Dauer:** ca. 3h
+
+### Erledigtes
+- Projektthema gewählt: **Project Workspace Manager** (SharePoint Management Tool)
+- Ersten Entwurf der Projektdokumentation erstellt
+- PowerPoint-Präsentation für das Projekt erstellt
+
+---
+
 ## 2026-03-20
 
 **Teilnehmer:** Benjamin
