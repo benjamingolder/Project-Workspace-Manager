@@ -1,7 +1,7 @@
 # Besprechung – 2026-03-20 Projektstart
 
 **Datum:** 2026-03-20
-**Teilnehmer:** Benjamin Golder, Dennis
+**Teilnehmer:** Benjamin Golder, Dennis Eberhard
 **Dauer:** k.A.
 
 > Hinweis: Dieses Protokoll wurde auf Basis einer KI-generierten Besprechungszusammenfassung erstellt. Inhalte wurden nicht vollständig auf Richtigkeit geprüft.
