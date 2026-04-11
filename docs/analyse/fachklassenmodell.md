@@ -20,7 +20,10 @@ Zentrale Klasse des Modells. Repräsentiert einen erstellten SharePoint-Projekta
 | beschreibung | String | Kurzbeschreibung des Projekts |
 | url | String | URL zur SharePoint-Site |
 | status | ArbeitsbereichStatus | Aktueller Zustand im Lebenszyklus |
-| erstellungsDatum | Date | Datum der Erstellung |
+| beantragtAm | LocalDate | Datum der Antragstellung |
+| genehmigungsDatum | LocalDate | Datum der Genehmigung |
+| erstellungsDatum | LocalDate | Datum der technischen Erstellung |
+| archivierungsDatum | LocalDate | Datum der Archivierung |
 
 **Assoziationen:**
 - Hat genau eine `Projektmetadaten` (Komposition)
@@ -38,9 +41,8 @@ Hält die fachlichen Kenndaten eines Projekts (FA01, Schritt 2: Formularfelder).
 |---|---|---|
 | projektCode | String | Eindeutiger Projektcode |
 | kostenstelle | String | Kostenstelle für Verrechnung |
-| startDatum | Date | Geplantes Projektstart-Datum |
-| endDatum | Date | Geplantes Projektende-Datum |
-| projektleiter | String | Name des verantwortlichen Projektleiters |
+| startDatum | LocalDate | Geplantes Projektstart-Datum |
+| endDatum | LocalDate | Geplantes Projektende-Datum |
 
 ---
 
@@ -50,8 +52,10 @@ Repräsentiert einen authentifizierten Projektmanager, der berechtigt ist, Proje
 | Attribut | Typ | Beschreibung |
 |---|---|---|
 | id | String | Eindeutiger Bezeichner (aus Entra ID) |
-| name | String | Vollständiger Name |
-| email | String | E-Mail-Adresse |
+| nachname | String | Nachname |
+| vorname | String | Vorname |
+| mail | String | E-Mail-Adresse |
+| tel | String | Telefonnummer |
 
 **Assoziationen:**
 - Erstellt null oder mehrere `Projektarbeitsbereich`-Objekte
@@ -142,7 +146,9 @@ Repräsentiert ein Standarddokument, das beim Erstellen des Arbeitsbereichs auto
 ### ArbeitsbereichStatus
 | Wert | Bedeutung |
 |---|---|
-| ENTWURF | Formular gespeichert, Arbeitsbereich noch nicht erstellt |
+| BEANTRAGT | Formular eingereicht, wartet auf Genehmigung |
+| GENEHMIGT | Antrag genehmigt, Erstellung ausstehend |
+| ABGELEHNT | Antrag abgelehnt |
 | IN_ERSTELLUNG | Provisionierung in SharePoint läuft |
 | AKTIV | Arbeitsbereich erfolgreich erstellt und nutzbar |
 | FEHLGESCHLAGEN | Erstellung fehlgeschlagen (technischer Fehler) |
