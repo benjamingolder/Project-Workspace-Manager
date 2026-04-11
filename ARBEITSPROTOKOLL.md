@@ -95,3 +95,17 @@ Dieses Protokoll dokumentiert alle Arbeitsschritte und Fortschritte im Projektve
 - Diagramme in Visual Paradigm (.vpp) finalisieren und als Export (PNG/SVG) in `docs/analyse/` ablegen
 - Dennis: Gegenlesen und ergänzen
 - Rückmeldungen des Dozenten einarbeiten
+
+---
+
+## 2026-04-11
+
+**Teilnehmer:** Benjamin
+**Dauer:** ca. 0.5h
+
+### Erledigtes
+
+**Klassendiagramm (Aufgabe 3 – OOA)**
+- Klassendiagramm aus Visual Paradigm als PNG exportiert
+- Bild unter `docs/architektur/klassendiagramm.png` abgelegt
+- `docs/architektur/README.md` mit Diagramm und Klassenbeschreibungen ergänzt
