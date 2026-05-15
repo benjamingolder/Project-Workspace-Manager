@@ -166,7 +166,14 @@ Dieses Protokoll dokumentiert alle Arbeitsschritte und Fortschritte im Projektve
 **Glossar (Auftrag 5)**
 - Verantwortlichkeiten aller Schnittstellen und Klassen aus allen 3 Schichten beschrieben (im Hauptdokument)
 
+**Diagramm-Vereinfachung (Iteration 2)**
+- Diagramme bewusst auf das Prüfungs-Minimum verschlankt, um die Nachbildung in Visual Paradigm aufwandsarm zu halten
+- Entfernt (für spätere Iterationen vorgesehen): `NamenskonventionValidator`, `BerechtigungsManager`, `IBenutzerRepository`, `IAuditLogRepository` sowie Domain-Objekte `Projektmetadaten`, `Ordner`, `Dokumentvorlage`, `Benutzer`, `Berechtigung`, `AuditLogEintrag` aus dem Designmodell
+- Im Designmodell verbleiben: 2 Services + 2 Service-Schnittstellen, 2 Factories (Singleton), 2 Repository-Schnittstellen + Implementierungen, `IDataAccess`/`SharePointDataAccess` (Singleton), Vererbungshierarchie `Projektvorlage` → `StandardVorlage`/`KundenprojektVorlage`/`InternVorlage`
+- Alle Pflicht-Patterns (Singleton, Factory, Repository), Schnittstellen mit Methodensignaturen, Vererbung und beide MVP-Use-Cases bleiben sichtbar
+- PNGs neu generiert (PlantUML), Hauptdokument `aufgabe-4-ood.md` und Annahmen entsprechend angepasst
+
 ### Nächste Schritte
-- Diagramme in Visual Paradigm importieren und als PNG nach `docs/design/` exportieren
+- Diagramme in Visual Paradigm nachbauen und als PNG nach `docs/design/` exportieren (für offizielle Abgabe)
 - Dennis: Gegenlesen, ergänzen, Patterns kritisch prüfen
 - Rückmeldungen des Dozenten einarbeiten und im Hauptdokument protokollieren

@@ -3,16 +3,13 @@ title Sequenzdiagramm – FA01 Projektarbeitsbereich erstellen (Normalablauf)
 
 actor Projektmanager as PM
 participant "ConsoleClient" as UI
-participant "arbeitsbereichService\n: IArbeitsbereichService" as SVC
-participant "vorlagenService\n: IVorlagenService" as VSVC
-participant "namensValidator\n: NamenskonventionValidator" as VAL
-participant "factory\n: ProjektarbeitsbereichFactory" as FAC
-participant "berechtigungsManager\n: BerechtigungsManager" as BM
-participant "arbeitsbereichRepo\n: IProjektarbeitsbereichRepository" as REPO
-participant "auditLogRepo\n: IAuditLogRepository" as AUDIT
-participant "dataAccess\n: IDataAccess" as DA
+participant ":IVorlagenService" as VSVC
+participant ":IArbeitsbereichService" as SVC
+participant ":ProjektarbeitsbereichFactory" as FAC
+participant ":IProjektarbeitsbereichRepository" as REPO
+participant ":IDataAccess" as DA
 
-PM -> UI : Arbeitsbereich erstellen\n(Formular ausfüllen, Vorlage wählen)
+PM -> UI : Arbeitsbereich erstellen
 activate UI
 
 UI -> VSVC : vorlagenLaden()
@@ -20,7 +17,7 @@ activate VSVC
 VSVC --> UI : List<Projektvorlage>
 deactivate VSVC
 
-UI -> SVC : arbeitsbereichErstellen(metadaten, vorlageId, ersteller)
+UI -> SVC : arbeitsbereichErstellen(name, vorlageId)
 activate SVC
 
 SVC -> VSVC : vorlageFinden(vorlageId)
@@ -28,27 +25,12 @@ activate VSVC
 VSVC --> SVC : projektvorlage
 deactivate VSVC
 
-SVC -> VAL : bildeName(jahr, kuerzel, name)
-activate VAL
-VAL --> SVC : formatierterName
-deactivate VAL
-
-SVC -> VAL : istNameEindeutig(formatierterName)
-activate VAL
-VAL --> SVC : true
-deactivate VAL
-
 SVC -> FAC : getInstance()
 activate FAC
-FAC --> SVC : factoryInstanz
-SVC -> FAC : erstelle(metadaten, projektvorlage, ersteller)
+FAC --> SVC : factory
+SVC -> FAC : erstelle(name, projektvorlage)
 FAC --> SVC : projektarbeitsbereich
 deactivate FAC
-
-SVC -> BM : setzeOwner(projektarbeitsbereich, ersteller)
-activate BM
-BM --> SVC : berechtigung
-deactivate BM
 
 SVC -> REPO : save(projektarbeitsbereich)
 activate REPO
@@ -59,19 +41,10 @@ deactivate DA
 REPO --> SVC : gespeicherterArbeitsbereich
 deactivate REPO
 
-SVC -> AUDIT : save(auditLogEintrag)
-activate AUDIT
-AUDIT -> DA : create("AuditLog", data)
-activate DA
-DA --> AUDIT : ok
-deactivate DA
-AUDIT --> SVC : true
-deactivate AUDIT
-
 SVC --> UI : projektarbeitsbereich
 deactivate SVC
 
-UI --> PM : Bestätigung + URL des Arbeitsbereichs
+UI --> PM : Bestätigung + URL
 deactivate UI
 
 @enduml
