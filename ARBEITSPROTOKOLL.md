@@ -4,6 +4,25 @@ Dieses Protokoll dokumentiert alle Arbeitsschritte und Fortschritte im Projektve
 
 ---
 
+## 2026-05-19
+
+**Teilnehmer:** Benjamin Golder
+**Dauer:** ca. 1h
+
+### Erledigtes
+
+**Aufgabe 4 – Diagramme mit Visual Paradigm nachgebaut**
+- Vier UML-Designdiagramme in Visual Paradigm nachmodelliert und als Bild exportiert:
+  - `business-schicht.png` (Business-Schicht)
+  - `persistence-schicht.png` (Persistence-Schicht)
+  - `integriert-klassendiagramm.png` (integriertes Klassendiagramm, alle 3 Schichten)
+  - `integriert-komponentendiagramm.png` (integriertes Komponentendiagramm)
+- Bisherige aus PlantUML generierte PNGs im Repo durch die neuen Visual-Paradigm-Exporte ersetzt
+- Alle `.puml`-Quelldateien in `docs/design/` entfernt (nicht mehr benötigt, da Modellierung jetzt in Visual Paradigm erfolgt)
+- `aufgabe-4-ood.md` angepasst: PlantUML-Quellenhinweise und Dateiübersicht aktualisiert (Modellierungstool nun Visual Paradigm)
+
+---
+
 ## 2026-02-27
 
 **Teilnehmer:** Benjamin Golder, Dennis Eberhard
